@@ -5,11 +5,10 @@ import { useDispatch, useSelector } from 'react-redux'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
-import { ContainerList, Category } from './styles'
+import { ContainerList } from './styles'
 import apiDatabase from '../../services/apiDatabase'
 import { config } from '../Utils'
 import List from '@material-ui/core/List'
-import ListItem from '@material-ui/core/ListItem'
 
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
@@ -41,10 +40,8 @@ const ProjectsList: React.FC = () => {
 	const handleChangeInput = async event => {
 		event.preventDefault()
 		const newData = { data: data }
-		await apiDatabase(`/network/git/query/${location}`, config).then(
+		await apiDatabase(`/github/repos/location/${location}`, config).then(
 			listOfProjects => {
-				console.log('1', listOfProjects)
-				console.log('2', listOfProjects.data)
 				newData.data.listOfProjects = listOfProjects.data
 				dispatch({ type: 'SEARCH', data: newData })
 			}
@@ -55,15 +52,6 @@ const ProjectsList: React.FC = () => {
 		const newData = { data: data }
 		newData.data.selectedProject = project
 		dispatch({ type: 'PROJECT', data: newData })
-	}
-
-	const [selectedIndex, setSelectedIndex] = React.useState(1)
-
-	const handleListItemClick = (
-		event: React.MouseEvent<HTMLDivElement, MouseEvent>,
-		index: number
-	) => {
-		setSelectedIndex(index)
 	}
 
 	return (

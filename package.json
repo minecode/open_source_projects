@@ -2,7 +2,7 @@
 	"name": "reactjs-setup",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "http://minecode.github.io/code_contest",
+	"homepage": "http://minecode.github.io/open_source_projects",
 	"dependencies": {
 		"@babel/cli": "^7.10.5",
 		"@babel/core": "^7.11.1",
@@ -26,6 +26,7 @@
 		"babel-plugin-module-resolver": "^4.0.0",
 		"base-64": "^0.1.0",
 		"bootstrap": "^4.5.2",
+		"depcheck": "^1.2.0",
 		"gh-pages": "^3.1.0",
 		"gray-matter": "^4.0.2",
 		"jwt-decode": "^3.0.0-beta.2",
@@ -60,7 +61,7 @@
 		"swr": "^0.3.0",
 		"ts-node-dev": "^1.0.0-pre.56",
 		"tsconfig-paths": "^3.9.0",
-		"typescript": "^3.9.7"
+		"typescript": "^4.0.3"
 	},
 	"scripts": {
 		"gh-pages": "gh-pages -d out -t true",

@@ -31,7 +31,7 @@
 		"gray-matter": "^4.0.2",
 		"jwt-decode": "^3.0.0-beta.2",
 		"markdown-to-jsx": "^7.0.0",
-		"marked": "^1.1.1",
+		"marked": "^4.0.10",
 		"next": "^9.5.3",
 		"next-images": "^1.4.1",
 		"polished": "^3.6.6",
